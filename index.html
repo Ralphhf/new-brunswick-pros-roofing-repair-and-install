@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Brunswick Pros Roofing Repair and Install</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #09090b;
+      --accent: #f97316;
+      --accent-light: #fb923c;
+      --text-primary: #ffffff;
+      --text-secondary: #a1a1aa;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        repeating-radial-gradient(circle at 0 0, transparent 0, var(--bg-dark) 40px),
+        repeating-linear-gradient(#1a1a1a55, #1a1a1a);
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: var(--glass-bg);
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--text-primary);
+      transition: all 0.3s ease;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-orb {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent), transparent);
+      filter: blur(100px);
+      opacity: 0.3;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(30px, -30px) scale(1.1); }
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 10;
+      max-width: 1000px;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-tagline {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      color: white;
+      box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(249, 115, 22, 0.4);
+    }
+
+    .btn-secondary {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      padding: 2rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .service-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(249, 115, 22, 0.1);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      border-radius: 15px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .service-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    .about {
+      padding: 5rem 2rem;
+      background: linear-gradient(180deg, transparent, rgba(249, 115, 22, 0.05), transparent);
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-description {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      padding: 2rem;
+      border-radius: 20px;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      padding: 2rem;
+      border-radius: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stars {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* Gallery */
+    .gallery {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      height: 300px;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: linear-gradient(180deg, transparent, rgba(249, 115, 22, 0.1), transparent);
+    }
+
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cta-content p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--accent);
+    }
+
+    .contact-detail {
+      margin-bottom: 1.5rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-detail strong {
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .form-status {
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .form-status.success {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+      display: block;
+    }
+
+    .form-status.error {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 3rem 2rem 2rem;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      line-height: 1.8;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--glass-border);
+      color: var(--text-secondary);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 400px;
+      height: 100vh;
+      background: var(--bg-dark);
+      backdrop-filter: blur(16px);
+      transition: right 0.3s ease;
+      z-index: 999;
+      padding: 2rem;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-menu .nav-links {
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+      }
+
+      .hero-tagline {
+        font-size: 1.2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">NBP Roofing</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:6317108938" class="nav-cta">Call Now</a>
+      <div class="hamburger" onclick="toggleMobile()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="nav-links">
+      <li><a href="#home" onclick="toggleMobile()">Home</a></li>
+      <li><a href="#services" onclick="toggleMobile()">Services</a></li>
+      <li><a href="#about" onclick="toggleMobile()">About</a></li>
+      <li><a href="#gallery" onclick="toggleMobile()">Gallery</a></li>
+      <li><a href="#contact" onclick="toggleMobile()">Contact</a></li>
+    </ul>
+    <a href="tel:6317108938" class="nav-cta" style="display: block; text-align: center; margin-top: 2rem;">Call Now</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-orb"></div>
+    <div class="hero-content">
+      <h1>New Brunswick Pros Roofing</h1>
+      <p class="hero-tagline">Protecting Your Home One Shingle at a Time</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Get Free Estimate</a>
+        <a href="tel:6317108938" class="btn-secondary">Call (631) 710-8938</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2 class="section-title">Our Expert Services</h2>
+    <div class="bento-grid">
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Complete Roof Installation</h3>
+        <p>Professional installation of new roofs using premium materials. We specialize in asphalt shingles, metal roofing, and flat roof systems, ensuring your home stays protected for decades.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Emergency Roof Repair</h3>
+        <p>24/7 emergency repair services for storm damage, leaks, and urgent roofing issues. Our rapid response team prevents further damage and protects your property immediately.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Roof Inspection & Maintenance</h3>
+        <p>Comprehensive roof inspections to identify potential issues before they become costly problems. Regular maintenance programs to extend your roof's lifespan and maintain warranty coverage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💧</div>
+        <h3>Gutter Installation & Repair</h3>
+        <p>Complete gutter system solutions including seamless gutter installation, repairs, and gutter guard protection to ensure proper water drainage and prevent foundation damage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">❄️</div>
+        <h3>Roof Replacement</h3>
+        <p>Expert roof replacement services when repairs are no longer viable. We handle everything from tear-off to final inspection, using industry-leading materials and techniques.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌟</div>
+        <h3>Skylight & Ventilation</h3>
+        <p>Installation and repair of skylights, roof vents, and attic ventilation systems to improve energy efficiency, prevent moisture buildup, and enhance natural lighting in your home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2 class="section-title">Trusted Roofing Experts</h2>
+      <p class="about-description">
+        New Brunswick Pros Roofing combines decades of experience with cutting-edge techniques to deliver superior roofing solutions. As a locally-owned company, we understand the unique weather challenges our community faces and provide tailored solutions that stand the test of time. Our commitment to excellence, transparent pricing, and exceptional customer service has made us the preferred roofing contractor for homeowners throughout the area.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number" data-target="1500">0</div>
+          <div class="stat-label">Roofs Installed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">% Satisfaction Rate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="24">0</div>
+          <div class="stat-label">Hour Response Time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"After a severe storm damaged our roof, NBP Roofing responded within hours. Their team was professional, efficient, and completed the repairs perfectly. They even helped with the insurance claim process. Highly recommend!"</p>
+        <div class="testimonial-author">Michael Thompson</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"We needed a complete roof replacement and got quotes from several companies. NBP offered the best value and their workmanship exceeded our expectations. The crew was respectful, clean, and finished on schedule."</p>
+        <div class="testimonial-author">Sarah Martinez</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I've used NBP Roofing for both my home and rental property. Their attention to detail and commitment to quality is outstanding. Ralph and his team are true professionals who stand behind their work."</p>
+        <div class="testimonial-author">David Chen</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2 class="section-title">Our Work</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzgyMjB8MHwxfHNlYXJjaHwzfHxyb29mJTIwcmVwYWlyJTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NjgwOTEwNDV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional roof repair">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1724806157596-cd7f5d86d7ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzgyMjB8MHwxfHNlYXJjaHwxfHxzaGluZ2xlcyUyMHJvb2ZpbmclMjBtYXRlcmlhbHxlbnwxfDB8fHwxNzY4MDkxMDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Quality roofing materials">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzgyMjB8MHwxfHNlYXJjaHwyfHxyb29maW5nJTIwdGVhbSUyMHdvcmtpbmd8ZW58MXwwfHx8MTc2ODA5MTA0Nnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Our professional team">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1621715365938-9eab2b5d8ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzgyMjB8MHwxfHNlYXJjaHwxfHxndXR0ZXIlMjBpbnN0YWxsYXRpb24lMjBob21lfGVufDF8MHx8fDE3NjgwOTEwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Gutter installation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1587935645051-cfb6659a51a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzgyMjB8MHwxfHNlYXJjaHw0fHxiZWF1dGlmdWwlMjBob21lJTIwY3VyYiUyMGFwcGVhbHxlbnwxfDB8fHwxNzY4MDkxMDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Beautiful home exterior">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1605808106781-3edfecf9fdc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzgyMjB8MHwxfHNlYXJjaHw0fHxtZXRhbCUyMHJvb2YlMjBtb2Rlcm58ZW58MXwwfHx8MTc2ODA5MTA0N3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern metal roofing">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Protect Your Investment?</h2>
+      <p>Don't wait until it's too late. Schedule your free roof inspection today and ensure your home stays safe and secure.</p>
+      <a href="#contact" class="btn-primary">Get Your Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-detail">
+          <strong>Phone</strong>
+          (631) 710-8938
+        </div>
+        <div class="contact-detail">
+          <strong>Email</strong>
+          ralph_farah_2001@hotmail.com
+        </div>
+        <div class="contact-detail">
+          <strong>Address</strong>
+          155 Hamilton Street<br>
+          New Brunswick, NJ
+        </div>
+        <div class="contact-detail">
+          <strong>Business Hours</strong>
+          Monday - Friday: 7:00 AM - 6:00 PM<br>
+          Saturday: 8:00 AM - 4:00 PM<br>
+          Sunday: Emergency Services Only
+        </div>
+      </div>
+      <div>
+        <h3>Request Your Free Estimate</h3>
+        <form id="contactForm" class="contact-form">
+          <input type="hidden" name="websiteId" value="47cca5c00e2c61f732bb205f042d5d5b">
+          <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+          <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
+          <div class="form-group"><input type="tel" name="phone" placeholder="Your Phone"></div>
+          <div class="form-group"><textarea name="message" placeholder="Tell us about your roofing project" required></textarea></div>
+          <button type="submit" class="submit-btn">Send Message</button>
+          <div id="formStatus" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About NBP Roofing</h4>
+        <p>Your trusted local roofing experts serving New Brunswick and surrounding areas with quality craftsmanship and exceptional service since 2009.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <p>
+          <a href="#services">Roof Installation</a><br>
+          <a href="#services">Roof Repair</a><br>
+          <a href="#services">Gutter Services</a><br>
+          <a href="#services">Emergency Services</a>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Service Areas</h4>
+        <p>
+          New Brunswick<br>
+          Edison<br>
+          Somerset<br>
+          Highland Park<br>
+          Piscataway<br>
+          And surrounding areas
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Get In Touch</h4>
+        <p>
+          <strong>24/7 Emergency Service</strong><br>
+          <a href="tel:6317108938">(631) 710-8938</a><br>
+          <a href="mailto:ralph_farah_2001@hotmail.com">ralph_farah_2001@hotmail.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 New Brunswick Pros Roofing Repair and Install. All rights reserved. | Licensed & Insured</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobile() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      mobileMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animatable elements
+    document.querySelectorAll('.service-card, .testimonial-card, .gallery-item').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Counter animation
+    const counters = document.querySelectorAll('.stat-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          let count = 0;
+          const increment = target / 100;
+          
+          const updateCounter = () => {
+            if (count < target) {
+              count += increment;
+              counter.textContent = Math.ceil(count);
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target;
+            }
+          };
+          
+          updateCounter();
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const status = document.getElementById('formStatus');
+      btn.disabled = true; 
+      btn.textContent = 'Sending...';
+      
+      try {
+        const res = await fetch('https://no-website-finder.onrender.com/api/form-submit', {
+          method: 'POST', 
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            websiteId: this.querySelector('[name="websiteId"]').value,
+            name: this.querySelector('[name="name"]').value,
+            email: this.querySelector('[name="email"]').value,
+            phone: this.querySelector('[name="phone"]').value || '',
+            message: this.querySelector('[name="message"]').value
+          })
+        });
+        
+        const data = await res.json();
+        status.textContent = data.success ? 'Message sent successfully! We\'ll contact you soon.' : 'Error sending message';
+        status.className = 'form-status ' + (data.success ? 'success' : 'error');
+        if (data.success) this.reset();
+      } catch (err) { 
+        status.textContent = 'Failed to send message. Please call us directly.'; 
+        status.className = 'form-status error'; 
+      }
+      
+      btn.disabled = false; 
+      btn.textContent = 'Send Message';
+    });
+
+    // Smooth scroll behavior for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Nav background on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(9, 9, 11, 0.9)';
+      } else {
+        nav.style.background = 'var(--glass-bg)';
+      }
+    });
+  </script>
+</body>
+</html>
